@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карта взаємозв'язків</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Карта взаємозв'язків глосарію</h1>
+    <p>Структура взаємозв'язків ключових понять</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="toc.html">Зміст</a>
+    <a href="navigation.html">Вхід</a>
+    <a href="dashboard.html">Дашборд</a>
+    <a href="modules.html">Модулі</a>
+    <a href="glossary.html">Глосарій</a>
+    <a href="search.html">Пошук</a>
+  </nav>
+
+  <main class="page">
+    <section class="card">
+      <h2>Структура системи</h2>
+      <pre class="diagram">
+Клієнт ──► Бронювання ──► Об'єкт
+   │           │             │
+   │           ├─ статус ─► Нове / Підтверджено / Заїзд / Виїзд / Скасовано
+   │           └─ впливає ─► KPI дашборду
+   │
+   └─ пов'язаний ─► Фінанси ──► Дохід / Витрата
+
+Об'єкт ── статус ──► Вільний / Зайнятий / На прибиранні / На ремонті
+Об'єкт ───► Задача ──► Очікує / В процесі / Виконано
+Аналітика ── агрегує ──► Бронювання + Фінанси + Завантаженість
+      </pre>
+    </section>
+
+    <section class="card">
+      <h2>Основні зв'язки</h2>
+      <ul>
+        <li>Клієнт → Бронювання (один клієнт може мати кілька бронювань)</li>
+        <li>Бронювання → Об'єкт (одне бронювання прив'язане до одного об'єкта)</li>
+        <li>Об'єкт → Задача (одному об'єкту можна призначити кілька задач)</li>
+        <li>Бронювання → KPI (статуси впливають на показники дашборду)</li>
+        <li>Фінанси → KPI (дохід та витрати впливають на показники)</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Див. також</h2>
+      <ul>
+        <li><a href="glossary.html">Глосарій</a></li>
+        <li><a href="index-subject.html">Предметний покажчик</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>© 2026 Навчальна довідка.</footer>
+</body>
+</html>

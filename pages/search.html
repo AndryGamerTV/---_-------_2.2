@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пошук</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Пошук у довідці</h1>
+    <p>Пошук за ключовими словами та повний текст</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="toc.html">Зміст</a>
+    <a href="navigation.html">Вхід</a>
+    <a href="dashboard.html">Дашборд</a>
+    <a href="modules.html">Модулі</a>
+    <a href="glossary.html">Глосарій</a>
+    <a href="search.html">Пошук</a>
+  </nav>
+
+  <main class="page">
+    <section class="card">
+      <h2>Як користуватися пошуком</h2>
+      <ul>
+        <li>Введіть запит у поле пошуку</li>
+        <li>Натисніть кнопку «Пошук»</li>
+        <li>Вибраний результат відкриється у новій вкладці</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Пошук за ключовими словами</h2>
+      <p>Введіть ключовий термін:</p>
+      <div class="search-bar">
+        <input id="search-keyword-input" type="text" placeholder="Наприклад: дашборд, бронювання, фінанси">
+        <button type="button" onclick="searchKeyword()">Пошук</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Пошук по сайту</h2>
+      <p>Використовуйте <code>Ctrl+F</code> для пошуку на поточній сторінці.</p>
+    </section>
+
+    <section class="card">
+      <h2>Популярні терміни</h2>
+      <div class="keywords">
+        <a class="keyword" href="dashboard.html">дашборд</a>
+        <a class="keyword" href="bookings.html">бронювання</a>
+        <a class="keyword" href="objects.html">об'єкти</a>
+        <a class="keyword" href="clients.html">клієнти</a>
+        <a class="keyword" href="finances.html">фінанси</a>
+        <a class="keyword" href="analytics.html">аналітика</a>
+        <a class="keyword" href="hotkeys.html">гарячі зони</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Навчальна довідка.</footer>
+
+  <script>
+    function searchKeyword() {
+      var keyword = document.getElementById("search-keyword-input").value.toLowerCase().trim();
+      var keywords = {
+        "дашборд": "dashboard.html",
+        "бронювання": "bookings.html",
+        "об'єкти": "objects.html",
+        "клієнти": "clients.html",
+        "фінанси": "finances.html",
+        "аналітика": "analytics.html",
+        "персонал": "hr.html",
+        "задачі": "tasks.html",
+        "гарячі зони": "hotkeys.html",
+        "гарячі клавіші": "hotkeys.html",
+        "хотспот": "hotkeys.html",
+        "hotspot": "hotkeys.html"
+      };
+      if (keywords[keyword]) {
+        window.location.href = keywords[keyword];
+      } else {
+        alert("Термін не знайдено. Спробуйте інший запит.");
+      }
+    }
+  </script>
+</body>
+</html>
