@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Пошук</title>
+  <title>Пошук | Ресторан Terra</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header>
-    <h1>Пошук у довідці</h1>
-    <p>Пошук за ключовими словами та повний текст</p>
+    <div>
+      <div class="brand">Ресторан Terra</div>
+      <div class="subtitle">Довідкова система</div>
+    </div>
   </header>
 
   <nav>
@@ -18,73 +20,90 @@
     <a href="navigation.html">Вхід</a>
     <a href="dashboard.html">Дашборд</a>
     <a href="modules.html">Модулі</a>
+    <a href="roles.html">Ролі</a>
     <a href="glossary.html">Глосарій</a>
-    <a href="search.html">Пошук</a>
+    <a href="search.html" class="active">Пошук</a>
   </nav>
 
-  <main class="page">
-    <section class="card">
-      <h2>Як користуватися пошуком</h2>
-      <ul>
-        <li>Введіть запит у поле пошуку</li>
-        <li>Натисніть кнопку «Пошук»</li>
-        <li>Вибраний результат відкриється у новій вкладці</li>
-      </ul>
-    </section>
+  <main>
+    <div class="card card-accent">
+      <h2>Пошук по довідці</h2>
+      <p>Введіть ключове слово або фразу для пошуку по всіх розділах довідки.</p>
+    </div>
 
-    <section class="card">
-      <h2>Пошук за ключовими словами</h2>
-      <p>Введіть ключовий термін:</p>
+    <div class="card">
       <div class="search-bar">
-        <input id="search-keyword-input" type="text" placeholder="Наприклад: дашборд, бронювання, фінанси">
-        <button type="button" onclick="searchKeyword()">Пошук</button>
+        <input type="text" id="search-input" placeholder="Наприклад: бронювання, оплата, статус, кухня..." autocomplete="off">
+        <button onclick="doSearch()">Знайти</button>
       </div>
-    </section>
+      <ul class="search-results" id="search-results"></ul>
+    </div>
 
-    <section class="card">
-      <h2>Пошук по сайту</h2>
-      <p>Використовуйте <code>Ctrl+F</code> для пошуку на поточній сторінці.</p>
-    </section>
-
-    <section class="card">
-      <h2>Популярні терміни</h2>
-      <div class="keywords">
-        <a class="keyword" href="dashboard.html">дашборд</a>
-        <a class="keyword" href="bookings.html">бронювання</a>
-        <a class="keyword" href="objects.html">об'єкти</a>
-        <a class="keyword" href="clients.html">клієнти</a>
-        <a class="keyword" href="finances.html">фінанси</a>
-        <a class="keyword" href="analytics.html">аналітика</a>
-        <a class="keyword" href="hotkeys.html">гарячі зони</a>
+    <div class="card">
+      <h2>Популярні теми</h2>
+      <div class="toc-grid">
+        <a href="modules.html#orders">Замовлення</a>
+        <a href="modules.html#kitchen">Кухонний дисплей</a>
+        <a href="modules.html#payments">Оплата</a>
+        <a href="modules.html#reservations">Бронювання</a>
+        <a href="roles.html">Ролі та доступ</a>
+        <a href="glossary.html">Глосарій</a>
+        <a href="faq.html">FAQ</a>
+        <a href="modules.html#analytics">Аналітика</a>
       </div>
-    </section>
+    </div>
   </main>
 
-  <footer>© 2026 Навчальна довідка.</footer>
+  <footer>© 2026 Ресторан Terra — Довідкова система</footer>
 
   <script>
-    function searchKeyword() {
-      var keyword = document.getElementById("search-keyword-input").value.toLowerCase().trim();
-      var keywords = {
-        "дашборд": "dashboard.html",
-        "бронювання": "bookings.html",
-        "об'єкти": "objects.html",
-        "клієнти": "clients.html",
-        "фінанси": "finances.html",
-        "аналітика": "analytics.html",
-        "персонал": "hr.html",
-        "задачі": "tasks.html",
-        "гарячі зони": "hotkeys.html",
-        "гарячі клавіші": "hotkeys.html",
-        "хотспот": "hotkeys.html",
-        "hotspot": "hotkeys.html"
-      };
-      if (keywords[keyword]) {
-        window.location.href = keywords[keyword];
-      } else {
-        alert("Термін не знайдено. Спробуйте інший запит.");
+    const searchIndex = [
+      { title: "Вхід та навігація", url: "navigation.html", text: "вхід авторизація логін пароль роль увійти відновлення забули пароль навігація сайдбар панель" },
+      { title: "Ролі та доступ", url: "roles.html", text: "роль власник менеджер офіціант кухар комірник доступ дозволи матриця права зміна" },
+      { title: "Дашборд — KPI", url: "dashboard.html", text: "дашборд kpi ключові показники активні замовлення бронювання виручка завантаженість сьогодні панель" },
+      { title: "Меню", url: "modules.html#menu", text: "меню страва напій ціна собівартість категорія закуски салати основні десерти напої доступна немає статус позиція" },
+      { title: "Замовлення", url: "modules.html#orders", text: "замовлення стіл офіціант позиції статус нове готується готово оплачено скасовано сума час фільтр" },
+      { title: "Кухонний дисплей", url: "modules.html#kitchen", text: "кухня кухонний дисплей черга приготування страва примітка статус нове готується готово відкладено позначити кухар" },
+      { title: "Оплата", url: "modules.html#payments", text: "оплата розрахунок картка готівка qr-код фіскальний чек поділ рахунку сума спосіб" },
+      { title: "Бронювання", url: "modules.html#reservations", text: "бронювання резерв столик гість телефон дата час кількість персон підтверджено скасовано завершено нове" },
+      { title: "Схема залу", url: "modules.html#floor", text: "схема залу столик зона вільний зайнятий заброньовано прибирання місткість мінімальний чек" },
+      { title: "Персонал і ролі", url: "modules.html#staff", text: "персонал співробітник пібрізвище посада рівень доступу зміна відпустка вихідний додати" },
+      { title: "Аналітика", url: "modules.html#analytics", text: "аналітика графік виручка завантаженість місяць топ страви середній чек зведена таблиця період квартал рік" },
+      { title: "Гарячі зони інтерфейсу", url: "hotkeys.html", text: "кнопка фільтр картка редагувати видалити зберегти скасувати поле введення таблиця рядок клавіша tab escape enter" },
+      { title: "Глосарій термінів", url: "glossary.html", text: "глосарій термін статус картка фільтр пошук роль офіціант замовлення бронювання оплата черга кухні" },
+      { title: "FAQ — поширені питання", url: "faq.html", text: "faq питання відповідь не бачу розділ змінити статус оплатити підтвердити додати страву графік аналітика видалення" },
+      { title: "Предметний покажчик", url: "index-subject.html", text: "покажчик алфавіт терміни поняття посилання" },
+    ];
+
+    function doSearch() {
+      const q = document.getElementById("search-input").value.trim().toLowerCase();
+      const resultsList = document.getElementById("search-results");
+      resultsList.innerHTML = "";
+
+      if (!q || q.length < 2) {
+        resultsList.innerHTML = "<li style='color: var(--muted); padding: 8px 0;'>Введіть не менше 2 символів.</li>";
+        return;
       }
+
+      const results = searchIndex.filter(item =>
+        item.title.toLowerCase().includes(q) || item.text.toLowerCase().includes(q)
+      );
+
+      if (!results.length) {
+        resultsList.innerHTML = "<li style='color: var(--muted); padding: 8px 0;'>Нічого не знайдено за запитом «" + q + "».</li>";
+        return;
+      }
+
+      results.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+        resultsList.appendChild(li);
+      });
     }
+
+    document.getElementById("search-input").addEventListener("keydown", function(e) {
+      if (e.key === "Enter") doSearch();
+    });
   </script>
 </body>
 </html>

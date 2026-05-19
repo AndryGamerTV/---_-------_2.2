@@ -3,59 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Довідка: Система управління турбазою</title>
+  <title>Довідка | Ресторан Terra</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header>
-    <h1>Довідка: Система управління турбазою</h1>
-    <p>Навчальна довідкова система для LKM Site</p>
+    <div>
+      <div class="brand">Ресторан Terra</div>
+      <div class="subtitle">Система управління рестораном — Довідка</div>
+    </div>
   </header>
 
   <nav>
-    <a href="index.html">Головна</a>
+    <a href="index.html" class="active">Головна</a>
     <a href="toc.html">Зміст</a>
     <a href="navigation.html">Вхід</a>
     <a href="dashboard.html">Дашборд</a>
     <a href="modules.html">Модулі</a>
+    <a href="roles.html">Ролі</a>
     <a href="glossary.html">Глосарій</a>
     <a href="search.html">Пошук</a>
   </nav>
 
-  <main class="page">
-    <section class="card">
-      <h2>Опис системи</h2>
-      <p>Система управління турбазою автоматизує облік об'єктів розміщення, бронювань, клієнтів, фінансів та персоналу.</p>
-      <p>Інтерфейс побудований навколо модулів, таблиць і карток редагування. Для навчальної демонстрації використовується набір стартових даних.</p>
-      <div class="note">Ця довідка доступна як набір розділів у папці <code>pages/</code>.</div>
-    </section>
+  <main>
+    <div class="card card-accent">
+      <h2>Довідка системи управління рестораном Terra</h2>
+      <p>Система об'єднує роботу залу та кухні в єдиному процесі: від формування меню й прийому замовлень до контролю оплат і бронювань. Вона синхронізує дії персоналу різних ролей та зменшує кількість помилок під час обслуговування.</p>
+      <div class="note">Ця довідка охоплює всі модулі системи Terra. Використовуйте навігацію вгорі або зміст нижче, щоб перейти до потрібного розділу.</div>
+    </div>
 
-    <section class="card">
-      <h2>Зміст</h2>
+    <div class="card">
+      <h2>Зміст довідки</h2>
       <div class="toc-grid">
         <a href="toc.html">Зміст</a>
         <a href="navigation.html">Вхід та навігація</a>
         <a href="roles.html">Ролі та доступ</a>
-        <a href="hotkeys.html">Гарячі клавіші та зони</a>
-        <a href="dashboard.html">Дашборд</a>
+        <a href="dashboard.html">Дашборд (KPI)</a>
         <a href="modules.html">Модулі системи</a>
+        <a href="hotkeys.html">Гарячі зони</a>
         <a href="glossary.html">Глосарій</a>
-        <a href="index-subject.html">Покажчик</a>
         <a href="faq.html">FAQ</a>
+        <a href="index-subject.html">Покажчик</a>
       </div>
-    </section>
+    </div>
 
-    <section class="card">
+    <div class="card">
       <h2>Швидкий старт</h2>
-      <ol>
-        <li>Перейдіть на сторінку <a href="navigation.html">Вхід та навігація</a>.</li>
-        <li>Перевірте вашу роль у розділі <a href="roles.html">Ролі та доступ</a>.</li>
-        <li>Почніть з <a href="dashboard.html">Дашборду</a>.</li>
-        <li>Дивіться <a href="modules.html">опис всіх модулів</a>.</li>
+      <ol class="steps">
+        <li>Перейдіть на сторінку <a href="navigation.html">Вхід та навігація</a> — оберіть роль і увійдіть до системи.</li>
+        <li>Перевірте свої дозволи у розділі <a href="roles.html">Ролі та доступ</a>.</li>
+        <li>Ознайомтеся з <a href="dashboard.html">Дашбордом</a> — головними показниками зміни.</li>
+        <li>Відкрийте <a href="modules.html">опис усіх модулів</a> та знайдіть потрібний.</li>
       </ol>
-    </section>
+    </div>
+
+    <div class="card">
+      <h2>Ключові показники системи</h2>
+      <div class="kpi-row">
+        <div class="kpi-box">
+          <div class="kpi-label">Активні замовлення</div>
+          <div class="kpi-value">—</div>
+          <div class="kpi-desc">Нові + ті, що готуються</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">Бронювання сьогодні</div>
+          <div class="kpi-value">—</div>
+          <div class="kpi-desc">Підтверджені посадки</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">Виручка</div>
+          <div class="kpi-value">₴</div>
+          <div class="kpi-desc">Сума оплат за зміну</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">Завантаженість</div>
+          <div class="kpi-value">%</div>
+          <div class="kpi-desc">Зайняті / заброньовані столики</div>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>© 2026 Навчальна довідка.</footer>
+  <footer>© 2026 Ресторан Terra — Довідкова система</footer>
 </body>
 </html>

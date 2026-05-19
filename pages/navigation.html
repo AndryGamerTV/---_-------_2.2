@@ -3,71 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Вхід та навігація</title>
+  <title>Вхід та навігація | Ресторан Terra</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header>
-    <h1>Вхід та навігація</h1>
-    <p>Як початися роботу в системі</p>
+    <div>
+      <div class="brand">Ресторан Terra</div>
+      <div class="subtitle">Довідкова система</div>
+    </div>
   </header>
 
   <nav>
     <a href="index.html">Головна</a>
     <a href="toc.html">Зміст</a>
-    <a href="navigation.html">Вхід</a>
+    <a href="navigation.html" class="active">Вхід</a>
     <a href="dashboard.html">Дашборд</a>
     <a href="modules.html">Модулі</a>
+    <a href="roles.html">Ролі</a>
     <a href="glossary.html">Глосарій</a>
     <a href="search.html">Пошук</a>
   </nav>
 
-  <main class="page">
-    <section class="card">
+  <main>
+    <div class="card card-accent">
+      <h2>Вхід та навігація</h2>
+      <p>Як розпочати роботу в системі управління рестораном Terra.</p>
+    </div>
+
+    <div class="card">
       <h2>Екран входу</h2>
-      <p>На екрані входу:</p>
-      <ol>
-        <li>Виберіть роль користувача.</li>
-        <li>Введіть логін і пароль.</li>
-        <li>Натисніть кнопку «Увійти в систему».</li>
+      <p>Перед початком роботи система відображає екран авторизації. На ньому потрібно:</p>
+      <ol class="steps">
+        <li>Обрати свою роль зі списку (Власник, Менеджер зміни, Офіціант, Кухар, Комірник).</li>
+        <li>Ввести логін і пароль у відповідні поля.</li>
+        <li>Натиснути кнопку <strong>«Увійти»</strong>.</li>
       </ol>
-      <div class="image-slot"><img src="../screenshots/Екран_входу.png" alt="Екран входу" width="100%"></div>
-    </section>
+      <figure class="screenshot">
+        <img src="../screenshots/Екран_входу.png" alt="Екран входу до системи Terra">
+        <figcaption>Екран входу — вибір ролі, логін і пароль</figcaption>
+      </figure>
+      <div class="note">Набір доступних модулів визначається обраною роллю. Докладніше — у розділі <a href="roles.html">Ролі та доступ</a>.</div>
+    </div>
 
-    <section class="card">
+    <div class="card">
       <h2>Відновлення пароля</h2>
-      <p>Якщо пароль забуто, натисніть «Забули пароль?» під кнопкою входу.</p>
-      <p>У вікні відновлення вкажіть e-mail або логін і натисніть «Надіслати».</p>
-    </section>
+      <p>Якщо пароль забуто — натисніть посилання <strong>«Забули пароль?»</strong> під кнопкою входу.</p>
+      <ol class="steps">
+        <li>У вікні, що відкрилось, введіть свій e-mail або логін.</li>
+        <li>Натисніть <strong>«Надіслати»</strong>.</li>
+        <li>Система підтвердить прийом запиту. Інструкції надійдуть на вказану адресу.</li>
+      </ol>
+    </div>
 
-    <section class="card">
-      <h2>Основне вікно</h2>
-      <p>Після входу відображається двопанельний інтерфейс:</p>
+    <div class="card">
+      <h2>Основне вікно системи</h2>
+      <p>Після успішного входу відображається двопанельний інтерфейс:</p>
       <ul>
-        <li>Ліворуч: навігаційна панель з кнопками модулів.</li>
-        <li>Праворуч: робоча область з вмістом обраного модуля.</li>
+        <li><strong>Ліва панель (сайдбар)</strong> — навігація між модулями. Містить назву ресторану, поточну роль користувача та кнопки переходу між розділами. Активна кнопка підсвічується помаранчевим.</li>
+        <li><strong>Права область (контент)</strong> — робоча зона обраного модуля: фільтри, таблиця записів та картка деталей.</li>
       </ul>
-      <div class="image-slot"><img src="../screenshots/Основне_вікно.png" alt="Основне вікно" width="100%"></div>
-    </section>
+      <figure class="screenshot">
+        <img src="../screenshots/Основне_меню.png" alt="Основне меню системи Terra">
+        <figcaption>Головне вікно — модуль меню з лівою навігаційною панеллю</figcaption>
+      </figure>
+      <div class="note-green">Кнопки модулів у лівій панелі з'являються лише ті, до яких має доступ ваша роль.</div>
+    </div>
 
-    <section class="card">
-      <h2>Навігаційна панель</h2>
-      <p>Кнопки модулів з'являються відповідно до ролі користувача. Поточна роль показана у верхній частині панелі.</p>
+    <div class="card">
+      <h2>Вихід із системи</h2>
+      <p>Кнопка <strong>«Вийти»</strong> розташована внизу лівої панелі. Натисніть її, щоб завершити сеанс і повернутися до екрану входу. Всі незбережені зміни в картках будуть скинуті.</p>
+    </div>
+
+    <div class="card">
+      <h2>Перехід за прямим посиланням</h2>
+      <p>Систему можна відкрити відразу на потрібному модулі, додавши параметр <code>?tab=</code> до адреси. Наприклад:</p>
       <ul>
-        <li>Кнопки модулів активні, якщо дозволено вашій ролі.</li>
-        <li>Кнопка «Вийти з системи» завершує сеанс.</li>
+        <li><code>Restorant.html?tab=orders</code> — одразу відкриє розділ Замовлення</li>
+        <li><code>Restorant.html?tab=kitchen</code> — Кухонний дисплей</li>
+        <li><code>Restorant.html?tab=analytics</code> — Аналітика</li>
       </ul>
-    </section>
+      <div class="note">Прямий перехід до модуля спрацює лише якщо ваша роль має доступ до цього розділу.</div>
+    </div>
 
-    <section class="card">
+    <div class="card">
       <h2>Див. також</h2>
       <ul>
         <li><a href="roles.html">Ролі та доступ</a></li>
         <li><a href="dashboard.html">Дашборд</a></li>
       </ul>
-    </section>
+    </div>
   </main>
 
-  <footer>© 2026 Навчальна довідка.</footer>
+  <footer>© 2026 Ресторан Terra — Довідкова система</footer>
 </body>
 </html>

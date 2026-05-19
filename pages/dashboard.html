@@ -3,60 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Дашборд</title>
+  <title>Дашборд | Ресторан Terra</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header>
-    <h1>Дашборд</h1>
-    <p>Головна панель із показниками</p>
+    <div>
+      <div class="brand">Ресторан Terra</div>
+      <div class="subtitle">Довідкова система</div>
+    </div>
   </header>
 
   <nav>
     <a href="index.html">Головна</a>
     <a href="toc.html">Зміст</a>
     <a href="navigation.html">Вхід</a>
-    <a href="dashboard.html">Дашборд</a>
+    <a href="dashboard.html" class="active">Дашборд</a>
     <a href="modules.html">Модулі</a>
+    <a href="roles.html">Ролі</a>
     <a href="glossary.html">Глосарій</a>
     <a href="search.html">Пошук</a>
   </nav>
 
-  <main class="page">
-    <section class="card">
-      <h2>Огляд</h2>
-      <p>Дашборд дає швидкий огляд поточного стану турбази.</p>
-      <div class="image-slot"><img src="../screenshots/Дашборд.png" alt="Дашборд" width="100%"></div>
-    </section>
+  <main>
+    <div class="card card-accent">
+      <h2>Дашборд — головна панель KPI</h2>
+      <p>Дашборд відображається одразу після входу і дає швидкий огляд поточного стану ресторану. Він доступний для всіх ролей, крім Кухаря та Комірника (які потрапляють одразу до свого робочого модуля).</p>
+    </div>
 
-    <section class="card">
-      <h2>KPI (ключові показники)</h2>
+    <div class="card">
+      <h2>Ключові показники (KPI)</h2>
+      <p>У верхній частині головної сторінки розміщено чотири KPI-блоки, які оновлюються в реальному часі:</p>
+      <div class="kpi-row">
+        <div class="kpi-box">
+          <div class="kpi-label">Активні замовлення</div>
+          <div class="kpi-value">—</div>
+          <div class="kpi-desc">Замовлення зі статусами «Нове» та «Готується»</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">Бронювання сьогодні</div>
+          <div class="kpi-value">—</div>
+          <div class="kpi-desc">Кількість бронювань на поточну дату</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">Виручка</div>
+          <div class="kpi-value">₴</div>
+          <div class="kpi-desc">Сума всіх зафіксованих оплат</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">Завантаженість</div>
+          <div class="kpi-value">%</div>
+          <div class="kpi-desc">Зайняті + заброньовані столики від загальної кількості</div>
+        </div>
+      </div>
+      <figure class="screenshot">
+        <img src="../screenshots/Дашборд.png" alt="Дашборд системи Terra">
+        <figcaption>Сторінка аналітики — KPI-блоки та графік завантаженості залу</figcaption>
+      </figure>
+      <div class="note">KPI оновлюються після кожної дії — додавання замовлення, зміни статусу столика, реєстрації оплати.</div>
+    </div>
+
+    <div class="card">
+      <h2>Щоденний сценарій контролю</h2>
+      <p>Рекомендований порядок перевірки на початку або в середині зміни:</p>
+      <ol class="steps">
+        <li>Перевірте <strong>активні замовлення</strong> — чи є зависання в статусі «Нове» без переходу до кухні.</li>
+        <li>Подивіться на <strong>бронювання сьогодні</strong> — скільки столиків потрібно підготувати і в який час.</li>
+        <li>Оцініть <strong>завантаженість</strong> — чи вистачає офіціантів на зайняті столики.</li>
+        <li>Перевірте <strong>виручку</strong> і порівняйте з очікуваним планом зміни.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Перехід до модулів</h2>
+      <p>Зі стартового екрану можна швидко перейти до будь-якого модуля через кнопки лівої панелі. Активний модуль підсвічується помаранчевою смугою зліва.</p>
       <ul>
-        <li><strong>Бронювань сьогодні</strong> — кількість активних бронювань у поточну дату.</li>
-        <li><strong>Завантаженість</strong> — відсоток зайнятих об'єктів.</li>
-        <li><strong>Дохід за місяць</strong> — сума надходжень за період.</li>
-        <li><strong>Активних гостей</strong> — унікальні клієнти з активними бронюваннями.</li>
+        <li>Кнопки відображаються лише ті, до яких має доступ ваша роль.</li>
+        <li>Кнопка <strong>«Вийти»</strong> внизу панелі завершує поточну сесію.</li>
       </ul>
-    </section>
+    </div>
 
-    <section class="card">
-      <h2>Таблиці на дашборді</h2>
+    <div class="card">
+      <h2>Аналітика (розширений вигляд)</h2>
+      <p>Для детального аналізу перейдіть до модуля <a href="modules.html#analytics">Аналітика</a>. Там доступні:</p>
       <ul>
-        <li><strong>Заїзди сьогодні</strong> — клієнти, що заїжджають сьогодні.</li>
-        <li><strong>Виїзди сьогодні</strong> — клієнти, що виїжджають сьогодні.</li>
-        <li><strong>Нові заявки</strong> — бронювання, які очікують підтвердження.</li>
+        <li>Графік виручки по місяцях (стовпчикова діаграма).</li>
+        <li>Графік завантаженості залу по місяцях (лінійна діаграма).</li>
+        <li>Таблиця топ-страв із кількістю замовлень і виручкою.</li>
+        <li>Зведена таблиця замовлень за довільний або заданий період.</li>
       </ul>
-    </section>
+    </div>
 
-    <section class="card">
+    <div class="card">
       <h2>Див. також</h2>
       <ul>
         <li><a href="modules.html">Модулі системи</a></li>
-        <li><a href="glossary.html">Глосарій</a></li>
+        <li><a href="modules.html#analytics">Аналітика</a></li>
+        <li><a href="glossary.html">Глосарій термінів</a></li>
       </ul>
-    </section>
+    </div>
   </main>
 
-  <footer>© 2026 Навчальна довідка.</footer>
+  <footer>© 2026 Ресторан Terra — Довідкова система</footer>
 </body>
 </html>

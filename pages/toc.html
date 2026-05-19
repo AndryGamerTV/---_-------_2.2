@@ -3,54 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Зміст довідки</title>
+  <title>Зміст | Ресторан Terra</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header>
-    <h1>Зміст</h1>
-    <p>Структура довідки</p>
+    <div>
+      <div class="brand">Ресторан Terra</div>
+      <div class="subtitle">Довідкова система</div>
+    </div>
   </header>
 
   <nav>
     <a href="index.html">Головна</a>
-    <a href="toc.html">Зміст</a>
+    <a href="toc.html" class="active">Зміст</a>
     <a href="navigation.html">Вхід</a>
     <a href="dashboard.html">Дашборд</a>
     <a href="modules.html">Модулі</a>
+    <a href="roles.html">Ролі</a>
     <a href="glossary.html">Глосарій</a>
     <a href="search.html">Пошук</a>
   </nav>
 
-  <main class="page">
-    <section class="card">
-      <h2>Розділи</h2>
-      <ol>
-        <li><a href="navigation.html">Вхід та навігація</a></li>
-        <li><a href="roles.html">Ролі та доступ</a></li>
-        <li><a href="hotkeys.html">Гарячі клавіші та зони</a></li>
-        <li><a href="dashboard.html">Дашборд</a></li>
-        <li><a href="modules.html">Модулі системи</a>
-          <ul>
-            <li><a href="objects.html">Об'єкти розміщення</a></li>
-            <li><a href="bookings.html">Бронювання</a></li>
-            <li><a href="clients.html">База клієнтів</a></li>
-            <li><a href="finances.html">Фінанси</a></li>
-            <li><a href="hr.html">Персонал (HR)</a></li>
-            <li><a href="tasks.html">Задачі</a></li>
-            <li><a href="analytics.html">Аналітика</a></li>
-          </ul>
-        </li>
-        <li><a href="glossary.html">Глосарій</a></li>
-        <li><a href="glossary-map.html">Карта взаємозв'язків</a></li>
-        <li><a href="index-subject.html">Предметний покажчик</a></li>
-        <li><a href="search.html">Пошук</a></li>
-        <li><a href="faq.html">Поширені питання</a></li>
-        <li><a href="design.html">Проєктування довідки</a></li>
-      </ol>
-    </section>
+  <main>
+    <div class="card card-accent">
+      <h2>Зміст довідки</h2>
+      <p>Повний перелік розділів довідки системи управління рестораном Terra.</p>
+    </div>
+
+    <div class="card">
+      <h2>1. Загальна інформація</h2>
+      <ul>
+        <li><a href="index.html">Головна сторінка</a> — опис системи та швидкий старт</li>
+        <li><a href="navigation.html">Вхід та навігація</a> — як увійти, відновити пароль, орієнтуватися в інтерфейсі</li>
+        <li><a href="roles.html">Ролі та доступ</a> — матриця прав для всіх ролей</li>
+        <li><a href="hotkeys.html">Гарячі зони інтерфейсу</a> — інтерактивні елементи та швидкі дії</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>2. Дашборд</h2>
+      <ul>
+        <li><a href="dashboard.html">Огляд дашборду</a> — ключові показники KPI та щоденний сценарій</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3. Модулі системи</h2>
+      <ul>
+        <li><a href="modules.html#menu">Меню</a> — страви, ціни, собівартість, статуси доступності</li>
+        <li><a href="modules.html#orders">Замовлення</a> — прийом, фільтрація, редагування, статуси</li>
+        <li><a href="modules.html#kitchen">Кухонний дисплей</a> — черга приготування, позначення готових страв</li>
+        <li><a href="modules.html#payments">Оплата</a> — фіксація оплат, поділ рахунку, фіскальний чек</li>
+        <li><a href="modules.html#reservations">Бронювання</a> — резерв столиків, дані гостей, статуси</li>
+        <li><a href="modules.html#floor">Схема залу</a> — візуальний контроль столиків по зонах</li>
+        <li><a href="modules.html#staff">Персонал і ролі</a> — облік співробітників, доступи, статуси зміни</li>
+        <li><a href="modules.html#analytics">Аналітика</a> — графіки виручки, завантаженості, топ-страви</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4. Довідкові матеріали</h2>
+      <ul>
+        <li><a href="glossary.html">Глосарій</a> — терміни інтерфейсу та пояснення</li>
+        <li><a href="faq.html">FAQ</a> — поширені питання та відповіді</li>
+        <li><a href="index-subject.html">Предметний покажчик</a> — алфавітний список понять</li>
+      </ul>
+    </div>
   </main>
 
-  <footer>© 2026 Навчальна довідка.</footer>
+  <footer>© 2026 Ресторан Terra — Довідкова система</footer>
 </body>
 </html>

@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Предметний покажчик</title>
+  <title>Покажчик | Ресторан Terra</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header>
-    <h1>Предметний покажчик</h1>
-    <p>Алфавітний перелік ключових термінів</p>
+    <div>
+      <div class="brand">Ресторан Terra</div>
+      <div class="subtitle">Довідкова система</div>
+    </div>
   </header>
 
   <nav>
@@ -18,95 +20,111 @@
     <a href="navigation.html">Вхід</a>
     <a href="dashboard.html">Дашборд</a>
     <a href="modules.html">Модулі</a>
+    <a href="roles.html">Ролі</a>
     <a href="glossary.html">Глосарій</a>
     <a href="search.html">Пошук</a>
   </nav>
 
-  <main class="page">
-    <section class="card">
+  <main>
+    <div class="card card-accent">
+      <h2>Предметний покажчик</h2>
+      <p>Алфавітний перелік ключових понять із посиланнями на відповідні розділи довідки.</p>
+    </div>
+
+    <div class="card">
       <h2>А</h2>
       <ul>
-        <li><a href="analytics.html">Аналітика</a></li>
-        <li><a href="roles.html">Адміністратор</a></li>
+        <li><a href="modules.html#analytics">Аналітика</a> — модуль звітів і графіків</li>
+        <li><a href="navigation.html">Авторизація</a> — вхід до системи</li>
+        <li><a href="roles.html">Адміністрування ролей</a> — матриця доступу</li>
       </ul>
-    </section>
 
-    <section class="card">
       <h2>Б</h2>
       <ul>
-        <li><a href="bookings.html">Бронювання</a></li>
-        <li><a href="clients.html">База клієнтів</a></li>
+        <li><a href="modules.html#reservations">Бронювання</a> — резервування столиків</li>
+        <li><a href="glossary.html">Бронювання: статуси</a> — Нове, Підтверджено, Завершено</li>
       </ul>
-    </section>
 
-    <section class="card">
+      <h2>В</h2>
+      <ul>
+        <li><a href="navigation.html">Вихід із системи</a> — завершення сесії</li>
+        <li><a href="navigation.html">Відновлення пароля</a> — посилання «Забули пароль?»</li>
+        <li><a href="dashboard.html">Виручка</a> — KPI на дашборді</li>
+      </ul>
+
       <h2>Г</h2>
       <ul>
-        <li><a href="hotkeys.html">Гарячі клавіші та зони</a></li>
+        <li><a href="dashboard.html">Головна панель</a> — дашборд із KPI</li>
+        <li><a href="modules.html#floor">Схема залу</a> — візуальний контроль столиків</li>
       </ul>
-    </section>
 
-    <section class="card">
       <h2>Д</h2>
       <ul>
-        <li><a href="dashboard.html">Дашборд</a></li>
-        <li><a href="glossary.html">Дохід</a></li>
+        <li><a href="dashboard.html">Дашборд</a> — KPI та стартовий екран</li>
+        <li><a href="roles.html">Доступ</a> — рівні прав персоналу</li>
       </ul>
-    </section>
 
-    <section class="card">
       <h2>З</h2>
       <ul>
-        <li><a href="glossary.html">Завантаженість</a></li>
-        <li><a href="tasks.html">Задачі</a></li>
+        <li><a href="dashboard.html">Завантаженість</a> — KPI зайнятості залу</li>
+        <li><a href="modules.html#orders">Замовлення</a> — модуль прийому та обробки</li>
+        <li><a href="glossary.html">Замовлення: статуси</a> — Нове, Готується, Готово, Оплачено</li>
       </ul>
-    </section>
 
-    <section class="card">
       <h2>К</h2>
       <ul>
-        <li><a href="clients.html">Клієнти</a></li>
-        <li><a href="glossary.html">KPI</a></li>
+        <li><a href="modules.html#kitchen">Кухонний дисплей</a> — черга приготування страв</li>
+        <li><a href="glossary.html">Картка</a> — форма редагування запису</li>
+        <li><a href="glossary.html">KPI</a> — ключові показники системи</li>
       </ul>
-    </section>
 
-    <section class="card">
+      <h2>М</h2>
+      <ul>
+        <li><a href="modules.html#menu">Меню</a> — каталог страв і напоїв</li>
+        <li><a href="glossary.html">Мінімальний чек</a> — порогова сума для столика</li>
+        <li><a href="roles.html">Менеджер зміни</a> — роль і доступи</li>
+      </ul>
+
       <h2>О</h2>
       <ul>
-        <li><a href="objects.html">Об'єкти</a></li>
+        <li><a href="modules.html#payments">Оплата</a> — модуль реєстрації розрахунків</li>
+        <li><a href="roles.html">Офіціант</a> — роль і доступи</li>
       </ul>
-    </section>
 
-    <section class="card">
       <h2>П</h2>
       <ul>
-        <li><a href="hr.html">Персонал</a></li>
+        <li><a href="navigation.html">Панель навігації</a> — ліва бокова панель</li>
+        <li><a href="modules.html#staff">Персонал і ролі</a> — облік співробітників</li>
+        <li><a href="search.html">Пошук</a> — пошук по довідці</li>
       </ul>
-    </section>
 
-    <section class="card">
       <h2>Р</h2>
       <ul>
-        <li><a href="roles.html">Ролі та доступ</a></li>
+        <li><a href="roles.html">Ролі</a> — типи користувачів системи</li>
+        <li><a href="navigation.html">Реєстрація входу</a> — екран авторизації</li>
       </ul>
-    </section>
 
-    <section class="card">
       <h2>С</h2>
       <ul>
-        <li><a href="glossary.html">Статус</a></li>
-        <li><a href="search.html">Пошук</a></li>
+        <li><a href="glossary.html">Статус</a> — поточний стан запису</li>
+        <li><a href="glossary.html">Собівартість</a> — вартість виготовлення страви</li>
+        <li><a href="glossary.html">Середній чек</a> — показник аналітики</li>
+        <li><a href="modules.html#floor">Схема залу</a> — розташування столиків</li>
       </ul>
-    </section>
 
-    <section class="card">
       <h2>Ф</h2>
       <ul>
-        <li><a href="finances.html">Фінанси</a></li>
+        <li><a href="hotkeys.html">Фільтри</a> — звуження списку за критеріями</li>
+        <li><a href="glossary.html">Фіскальний чек</a> — номер документа оплати</li>
       </ul>
-    </section>
+
+      <h2>Ч</h2>
+      <ul>
+        <li><a href="modules.html#kitchen">Черга кухні</a> — список страв у приготуванні</li>
+      </ul>
+    </div>
   </main>
 
-  <footer>© 2026 Навчальна довідка.</footer>
+  <footer>© 2026 Ресторан Terra — Довідкова система</footer>
 </body>
 </html>
